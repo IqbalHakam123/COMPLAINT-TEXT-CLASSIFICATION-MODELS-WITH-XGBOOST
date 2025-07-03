@@ -17,6 +17,7 @@ SLANG_PATH = "source/slang-kamus.txt"
 THRESHOLD = 0.4
 
 nltk.download('stopwords')
+nltk.download('punkt')
 
 @st.cache_data
 def load_slang_dict():
