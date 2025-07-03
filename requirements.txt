@@ -10,3 +10,12 @@ nltk==3.8.1
 Sastrawi==1.0.1
 wordcloud==1.9.4
 streamlit_extras==0.4.0
+numpy==1.26.4
+opencv-python==4.8.0.76
+pandas==2.2.2
+Pillow==9.5.0
+plotly==6.1.2
+streamlit==1.46.0
+tensorflow>=2.15.0
+protobuf==4.25.3
+openpyxl==3.1.5
