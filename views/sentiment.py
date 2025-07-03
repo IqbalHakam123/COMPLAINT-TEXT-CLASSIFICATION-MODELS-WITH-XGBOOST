@@ -93,8 +93,11 @@ def main():
             st.subheader("📊 Hasil Prediksi:")
             if pred == 1:
                 st.success(f"✅ Aduan Terdeteksi!")
+                st.toast("👍 Aduan berhasil diidentifikasi!", icon="📣")
+                st.balloons()
             else:
                 st.error(f"❌ Bukan Aduan ")
+                st.toast("ℹ️ Teks tidak terdeteksi sebagai aduan.", icon="💡")
 
     if st.button("⬅️ Kembali ke Beranda"):
         st.query_params["page"] = "about"
