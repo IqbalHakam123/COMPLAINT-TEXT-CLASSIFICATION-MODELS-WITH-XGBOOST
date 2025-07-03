@@ -15,6 +15,8 @@ KEYW_PATH = "model/aduan_keywords-1.npy"
 SLANG_PATH = "source/slang-kamus.txt"
 THRESHOLD = 0.4
 
+nltk.download('stopwords')
+
 @st.cache_data
 def load_slang_dict():
     d = {}
