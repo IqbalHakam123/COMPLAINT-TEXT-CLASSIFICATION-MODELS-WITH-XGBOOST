@@ -4,8 +4,8 @@ nltk==3.9.1
 numpy==2.3.1
 pandas==2.3.0
 Sastrawi==1.0.1
-Sastrawi==1.0.1
 scipy==1.16.0
+scikit-learn==1.4.2
 streamlit==1.42.2
 streamlit_extras==0.7.5
 wordcloud==1.9.4
