@@ -2,6 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 import re
+import nltk
 from nltk.tokenize import word_tokenize
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from nltk.corpus import stopwords
