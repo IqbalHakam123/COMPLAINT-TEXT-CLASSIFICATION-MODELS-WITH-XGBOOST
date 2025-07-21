@@ -1,4 +1,4 @@
-
+{
     "regex_booster_patterns": [
         { "head": "jembatan",      "tail": "(rusak|retak|keropos|roboh|goyah|ambruk|berbahaya|bocor|bergetar)" },
         { "head": "jalan",         "tail": "(berlubang|amblas|retak|semrawut|rusak|becek|licin|bergelombang|tertutup|terhalang|gelap|menyempit|tidak\\s*rata|tidak\\s*mulus|ambrol|hancur|belum\\s*diaspal|tanah\\s*merah|berbatu)" },
@@ -275,4 +275,4 @@
         { "head": "STNK",          "tail": "(palsu\\s*marak)" },
         { "head": "KIR",           "tail": "(kendaraan\\s*tidak\\s*berlaku)" }
     ]
-
+}
