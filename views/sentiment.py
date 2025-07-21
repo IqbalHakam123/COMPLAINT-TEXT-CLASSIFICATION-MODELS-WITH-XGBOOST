@@ -49,7 +49,6 @@ def load_regex_boosters(json_path: str, max_gap: int = 6) -> List[Pattern]:
         with open(json_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        # Ambil list pola regex dari key 'regex_booster_patterns'
         booster_patterns = data.get("regex_booster_patterns", [])
         compiled_patterns = []
 
@@ -63,14 +62,14 @@ def load_regex_boosters(json_path: str, max_gap: int = 6) -> List[Pattern]:
 
             head = re.escape(p["head"])
             tail = p["tail"]
-            # Pola regex sesuai requirement, max_gap spaces antar head dan tail
-            pattern = rf"{head}(?:\s+\w+){{0,{max_gap}}}\s+{tail}"
+            pattern = rf"{head}(?:\s+\w+){{0,{max_gap}}}?\s*{tail}"
             compiled_patterns.append(re.compile(pattern, flags=re.IGNORECASE))
 
         return compiled_patterns
     except Exception as e:
         st.error(f"Gagal memuat regex boosters: {e}")
         return []
+
 
 @st.cache_resource
 def load_model():
