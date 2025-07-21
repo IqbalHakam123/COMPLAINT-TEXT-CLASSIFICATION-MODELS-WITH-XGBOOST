@@ -55,15 +55,19 @@ def predict_aduan(text, vectorizer, xgb_model, aduan_keywords, slang_dict, stemm
     return lbl, prob, txt_clean
 
 def main():
+    # ====== Load semua komponen pendukung ======
     vectorizer = joblib.load(VECT_PATH)
     xgb_model = joblib.load(XGB_PATH)
     aduan_keywords = set(np.load(KEYW_PATH, allow_pickle=True))
     slang_dict = load_slang_dict()
     stemmer = StemmerFactory().create_stemmer()
-    stop_words = set(stopwords.words("indonesian")) | set(stopwords.words("english"))
-    stop_words.update(["iya"])
 
-#======================= UI HALAMAN PREDIKSI =============
+    # ====== Konfigurasi Stopwords ======
+    stop_words = set(stopwords.words("indonesian")) | set(stopwords.words("english"))
+    stop_words.update(["iya", "lalu", "lintas"])   
+    stop_words -= {"tidak", "macet", "jalan"}      
+
+    # ======================= UI HALAMAN PREDIKSI =======================
     colored_header(
         label="🕵️ Sampaikan Aduan Anda",
         description="Sistem ini akan mendeteksi apakah teks Anda merupakan aduan atau bukan.",
