@@ -1,932 +1,276 @@
-{
-    "regex_booster_patterns":[
-        {
-    "head": "jembatan",
-    "tail": "(rusak|retak|keropos|roboh|goyah|ambruk|berbahaya|bocor|bergetar)"
-  },
-  {
-    "head": "jalan",
-    "tail": "(berlubang|amblas|retak|semrawut|rusak|becek|licin|bergelombang|tertutup|terhalang|gelap|menyempit|tidak\\s*rata|tidak\\s*mulus|ambrol|hancur|belum\\s*diaspal|tanah\\s*merah|berbatu)"
-  },
-  {
-    "head": "aspal",
-    "tail": "(mengelupas|retak|rusak|tipis|jebol|hancur|terkelupas\\s*parah)"
-  },
-  {
-    "head": "trotoar",
-    "tail": "(licin|pudar|rusak|berlubang|dipenuhi|tidak\\s*aman)"
-  },
-  {
-    "head": "rambu",
-    "tail": "(pudar|hilang|rusak|tertutup|terbalik|tidak\\s*jelas|kabur)"
-  },
-  {
-    "head": "lampu",
-    "tail": "(padam|mati|rusak|tak\\s*menyala|kedip-kedip|tidak\\s*berfungsi|error)"
-  },
-  {
-    "head": "genangan",
-    "tail": "(air|banjir|luas|dalam)"
-  },
-  {
-    "head": "banjir",
-    "tail": "(parah|menggenang|luas|rob)"
-  },
-  {
-    "head": "tanah",
-    "tail": "(longsor|erosi|tergelincir)"
-  },
-  {
-    "head": "pohon",
-    "tail": "(tumbang|roboh|menimpa|halangi\\s*jalan)"
-  },
-  {
-    "head": "kemacetan",
-    "tail": "(parah|mengular|panjang|ekstrem|total)"
-  },
-  {
-    "head": "persimpangan",
-    "tail": "(macet|berbahaya|tanpa\\s*lampu|rawan\\s*macet)"
-  },
-  {
-    "head": "akses",
-    "tail": "(darurat|terhambat|tersendat|masuk\\s*terhambat|keluar\\s*tersendat|gang\\s*terhambat)"
-  },
-  {
-    "head": "ambulans",
-    "tail": "(tersendat|terhambat|tak\\s*lolos)"
-  },
-  {
-    "head": "underpass",
-    "tail": "(banjir|tergenang|ambles|gelap|bocor)"
-  },
-  {
-    "head": "flyover",
-    "tail": "(retak|keropos|ambles|bergetar|bocor)"
-  },
-  {
-    "head": "palang",
-    "tail": "(pesawat|kereta\\s*pintu|kereta\\s*api\\s*macet|rel\\s*rusak)"
-  },
-  {
-    "head": "ojek",
-    "tail": "(online|ngambek|terlambat|susah\\s*dapat|mogok\\s*massal)"
-  },
-  {
-    "head": "kendaraan",
-    "tail": "(ngetem|ngebut|parkir|mogok\\s*di\\s*jalan|lawan\\s*arah|ugal-ugalan)"
-  },
-  {
-    "head": "tolong",
-    "tail": "(segera|perbaiki|respon|tangani|atasi)"
-  },
-  {
-    "head": "mohon",
-    "tail": "(dibersihkan|ditangani|diperbaiki|segera)"
-  },
-  {
-    "head": "gila",
-    "tail": "(macet|becek|rusak|parah)"
-  },
-  {
-    "head": "macet",
-    "tail": "(panjang|mengular|total|parah|akibat\\s*kecelakaan|banget|ekstrem)"
-  },
-  {
-    "head": "traffic",
-    "tail": "(light\\s*error|jam|chaos)"
-  },
-  {
-    "head": "bus",
-    "tail": "(kota\\s*mogok|jarang\\s*lewat|penuh\\s*sesak|rapid\\s*transit\\s*terlambat)"
-  },
-  {
-    "head": "kereta",
-    "tail": "(terlambat|batal|api\\s*macet)"
-  },
-  {
-    "head": "angkot",
-    "tail": "(ngetem|lama)"
-  },
-  {
-    "head": "grab",
-    "tail": "(terlambat|susah\\s*dapat)"
-  },
-  {
-    "head": "gojek",
-    "tail": "(susah\\s*dapat|terlambat)"
-  },
-  {
-    "head": "ojol",
-    "tail": "(mogok\\s*massal|ngambek|terlambat|pilih-pilih)"
-  },
-  {
-    "head": "parkir",
-    "tail": "(liar\\s*merajalela|sembarangan|double|triple|blokir\\s*akses|meter\\s*rusak)"
-  },
-  {
-    "head": "terminal",
-    "tail": "(kotor|tidak\\s*layak|rusak)"
-  },
-  {
-    "head": "halte",
-    "tail": "(rusak|bocor|kotor)"
-  },
-  {
-    "head": "stasiun",
-    "tail": "(kereta\\s*rusak|rusak)"
-  },
-  {
-    "head": "peron",
-    "tail": "(berbahaya|rusak)"
-  },
-  {
-    "head": "rel",
-    "tail": "(kereta\\s*rusak|rusak)"
-  },
-  {
-    "head": "commuter",
-    "tail": "(line\\s*delay|delay)"
-  },
-  {
-    "head": "mikrolet",
-    "tail": "(parkir\\s*sembarangan|ugal-ugalan)"
-  },
-  {
-    "head": "pete-pete",
-    "tail": "(ugal-ugalan|ngetem)"
-  },
-  {
-    "head": "tol",
-    "tail": "(macet\\s*panjang|bermasalah|antrian\\s*panjang)"
-  },
-  {
-    "head": "e-toll",
-    "tail": "(bermasalah|error)"
-  },
-  {
-    "head": "reader",
-    "tail": "(tol\\s*error|error)"
-  },
-  {
-    "head": "aplikasi",
-    "tail": "(ojol\\s*error|parkir\\s*error|waze\\s*salah\\s*arah)"
-  },
-  {
-    "head": "GPS",
-    "tail": "(error|salah)"
-  },
-  {
-    "head": "navigasi",
-    "tail": "(menyesatkan|salah)"
-  },
-  {
-    "head": "CCTV",
-    "tail": "(lalu\\s*lintas\\s*mati|mati)"
-  },
-  {
-    "head": "sistem",
-    "tail": "(monitoring\\s*down|adaptif\\s*macet|buka\\s*tutup\\s*kacau)"
-  },
-  {
-    "head": "smart",
-    "tail": "(traffic\\s*light\\s*offline)"
-  },
-  {
-    "head": "sensor",
-    "tail": "(lampu\\s*rusak|rusak)"
-  },
-  {
-    "head": "push",
-    "tail": "(button\\s*penyeberangan\\s*rusak)"
-  },
-  {
-    "head": "marka",
-    "tail": "(jalan\\s*pudar|pudar)"
-  },
-  {
-    "head": "garis",
-    "tail": "(pembatas\\s*hilang|hilang)"
-  },
-  {
-    "head": "zebra",
-    "tail": "(cross\\s*tidak\\s*jelas)"
-  },
-  {
-    "head": "pintu",
-    "tail": "(perlintasan\\s*error)"
-  },
-  {
-    "head": "bottleneck",
-    "tail": "(parah|macet)"
-  },
-  {
-    "head": "choke",
-    "tail": "(point\\s*macet)"
-  },
-  {
-    "head": "simpang",
-    "tail": "(macet|berbahaya)"
-  },
-  {
-    "head": "one",
-    "tail": "(way\\s*semrawut)"
-  },
-  {
-    "head": "contra",
-    "tail": "(flow\\s*gagal)"
-  },
-  {
-    "head": "jam",
-    "tail": "(sibuk\\s*chaos)"
-  },
-  {
-    "head": "rush",
-    "tail": "(hour\\s*nightmare)"
-  },
-  {
-    "head": "weekend",
-    "tail": "(macet\\s*total)"
-  },
-  {
-    "head": "arus",
-    "tail": "(mudik\\s*padat)"
-  },
-  {
-    "head": "jalur",
-    "tail": "(pantura\\s*macet|lambat\\s*terganggu|cepat\\s*rusak|sepeda\\s*rusak)"
-  },
-  {
-    "head": "bundaran",
-    "tail": "(macet\\s*memutar)"
-  },
-  {
-    "head": "U-turn",
-    "tail": "(panjang|macet)"
-  },
-  {
-    "head": "putar",
-    "tail": "(balik\\s*macet)"
-  },
-  {
-    "head": "BRT",
-    "tail": "(rusak|terlambat)"
-  },
-  {
-    "head": "shelter",
-    "tail": "(bus\\s*bocor)"
-  },
-  {
-    "head": "tempat",
-    "tail": "(tunggu\\s*bus\\s*kotor)"
-  },
-  {
-    "head": "jadwal",
-    "tail": "(bus\\s*tidak\\s*pasti)"
-  },
-  {
-    "head": "tarif",
-    "tail": "(ojol\\s*naik|parkir\\s*mahal)"
-  },
-  {
-    "head": "driver",
-    "tail": "(ojol\\s*pilih-pilih)"
-  },
-  {
-    "head": "e-hailing",
-    "tail": "(bermasalah)"
-  },
-  {
-    "head": "ride",
-    "tail": "(sharing\\s*terganggu)"
-  },
-  {
-    "head": "bike",
-    "tail": "(sharing\\s*rusak)"
-  },
-  {
-    "head": "sepeda",
-    "tail": "(umum\\s*hilang)"
-  },
-  {
-    "head": "docking",
-    "tail": "(station\\s*penuh)"
-  },
-  {
-    "head": "tukang",
-    "tail": "(parkir\\s*nakal)"
-  },
-  {
-    "head": "lahan",
-    "tail": "(parkir\\s*sempit)"
-  },
-  {
-    "head": "fasilitas",
-    "tail": "(terminal\\s*rusak)"
-  },
-  {
-    "head": "motor",
-    "tail": "(parkir\\s*di\\s*trotoar|masuk\\s*jalur\\s*busway|lawan\\s*arah)"
-  },
-  {
-    "head": "mobil",
-    "tail": "(parkir\\s*di\\s*badan\\s*jalan|terobos\\s*jalur\\s*sepeda|mogok\\s*di\\s*jalan)"
-  },
-  {
-    "head": "hujan",
-    "tail": "(jalan\\s*licin)"
-  },
-  {
-    "head": "kabut",
-    "tail": "(asap\\s*tebal)"
-  },
-  {
-    "head": "visibility",
-    "tail": "(rendah)"
-  },
-  {
-    "head": "berlumpur",
-    "tail": "(jalan)"
-  },
-  {
-    "head": "material",
-    "tail": "(konstruksi\\s*berserakan)"
-  },
-  {
-    "head": "galian",
-    "tail": "(proyek\\s*menganggu)"
-  },
-  {
-    "head": "pekerjaan",
-    "tail": "(jalan\\s*sembarangan)"
-  },
-  {
-    "head": "penerangan",
-    "tail": "(jalan\\s*mati)"
-  },
-  {
-    "head": "area",
-    "tail": "(rawan\\s*kejahatan|school\\s*zone\\s*tidak\\s*aman)"
-  },
-  {
-    "head": "crosswalk",
-    "tail": "(berbahaya)"
-  },
-  {
-    "head": "blind",
-    "tail": "(spot\\s*berbahaya)"
-  },
-  {
-    "head": "tikungan",
-    "tail": "(maut|berbahaya)"
-  },
-  {
-    "head": "tanjakan",
-    "tail": "(curam\\s*licin)"
-  },
-  {
-    "head": "speed",
-    "tail": "(bump\\s*terlalu\\s*tinggi)"
-  },
-  {
-    "head": "polisi",
-    "tail": "(tidur\\s*merusak)"
-  },
-  {
-    "head": "perlintasan",
-    "tail": "(anak\\s*sekolah\\s*berbahaya)"
-  },
-  {
-    "head": "klakson",
-    "tail": "(berlebihan)"
-  },
-  {
-    "head": "suara",
-    "tail": "(knalpot\\s*berisik)"
-  },
-  {
-    "head": "balap",
-    "tail": "(liar)"
-  },
-  {
-    "head": "pedagang",
-    "tail": "(kaki\\s*lima\\s*di\\s*jalan)"
-  },
-  {
-    "head": "warung",
-    "tail": "(tenda\\s*di\\s*badan\\s*jalan)"
-  },
-  {
-    "head": "pengemis",
-    "tail": "(di\\s*lampu\\s*merah)"
-  },
-  {
-    "head": "pengamen",
-    "tail": "(jalanan\\s*mengganggu)"
-  },
-  {
-    "head": "ongkos",
-    "tail": "(naik\\s*gara-gara\\s*macet)"
-  },
-  {
-    "head": "BBM",
-    "tail": "(boros\\s*karena\\s*macet)"
-  },
-  {
-    "head": "terlambat",
-    "tail": "(kerja\\s*karena\\s*macet)"
-  },
-  {
-    "head": "deadline",
-    "tail": "(terancam\\s*macet)"
-  },
-  {
-    "head": "pemadam",
-    "tail": "(kebakaran\\s*tersendat)"
-  },
-  {
-    "head": "distribusi",
-    "tail": "(barang\\s*terhambat)"
-  },
-  {
-    "head": "logistik",
-    "tail": "(terganggu\\s*macet)"
-  },
-  {
-    "head": "parah",
-    "tail": "(poll|banget)"
-  },
-  {
-    "head": "jalanan",
-    "tail": "(kacau\\s*balau|semrawut)"
-  },
-  {
-    "head": "lalu",
-    "tail": "(lintas\\s*runyam)"
-  },
-  {
-    "head": "situasi",
-    "tail": "(chaos)"
-  },
-  {
-    "head": "stuck",
-    "tail": "(total)"
-  },
-  {
-    "head": "mandeg",
-    "tail": "(ga\\s*jalan)"
-  },
-  {
-    "head": "antri",
-    "tail": "(mengular|panjang)"
-  },
-  {
-    "head": "bergelombang",
-    "tail": "(kayak\\s*laut)"
-  },
-  {
-    "head": "bahu",
-    "tail": "(jalan\\s*rusak)"
-  },
-  {
-    "head": "median",
-    "tail": "(jalan\\s*rusak)"
-  },
-  {
-    "head": "pembatas",
-    "tail": "(jalan\\s*hilang|median\\s*roboh)"
-  },
-  {
-    "head": "gorong-gorong",
-    "tail": "(tersumbat)"
-  },
-  {
-    "head": "saluran",
-    "tail": "(air\\s*mampet)"
-  },
-  {
-    "head": "drainase",
-    "tail": "(buruk)"
-  },
-  {
-    "head": "setapak",
-    "tail": "(rusak)"
-  },
-  {
-    "head": "gang",
-    "tail": "(sempit)"
-  },
-  {
-    "head": "JPO",
-    "tail": "(rusak|berbahaya)"
-  },
-  {
-    "head": "terowongan",
-    "tail": "(bocor|gelap)"
-  },
-  {
-    "head": "sambungan",
-    "tail": "(flyover\\s*rusak)"
-  },
-  {
-    "head": "pagar",
-    "tail": "(pembatas\\s*rusak)"
-  },
-  {
-    "head": "guardrail",
-    "tail": "(lepas)"
-  },
-  {
-    "head": "infrastruktur",
-    "tail": "(jalan\\s*rusak|transportasi\\s*buruk|publik\\s*hancur)"
-  },
-  {
-    "head": "konstruksi",
-    "tail": "(jalan\\s*asal-asalan|bangunan\\s*retak|material\\s*jelek)"
-  },
-  {
-    "head": "kontraktor",
-    "tail": "(abal-abal|tidak\\s*kompeten|kerja\\s*sembarangan)"
-  },
-  {
-    "head": "anggaran",
-    "tail": "(jalan\\s*habis|proyek\\s*membengkak|dana\\s*bocor)"
-  },
-  {
-    "head": "tender",
-    "tail": "(jalan\\s*bermasalah|proyek\\s*asal-asalan)"
-  },
-  {
-    "head": "pengawasan",
-    "tail": "(proyek\\s*lemah|jalan\\s*tidak\\s*ada)"
-  },
-  {
-    "head": "kualitas",
-    "tail": "(jalan\\s*buruk|material\\s*jelek|pekerjaan\\s*asal)"
-  },
-  {
-    "head": "spesifikasi",
-    "tail": "(jalan\\s*tidak\\s*sesuai|material\\s*di\\s*bawah\\s*standar)"
-  },
-  {
-    "head": "maintenance",
-    "tail": "(jalan\\s*diabaikan|infrastruktur\\s*tidak\\s*ada)"
-  },
-  {
-    "head": "perawatan",
-    "tail": "(jalan\\s*tidak\\s*rutin|fasilitas\\s*terabaikan)"
-  },
-  {
-    "head": "revitalisasi",
-    "tail": "(jalan\\s*gagal|area\\s*tidak\\s*berhasil)"
-  },
-  {
-    "head": "perbaikan",
-    "tail": "(jalan\\s*tambal\\s*sulam|sementara\\s*rusak\\s*lagi)"
-  },
-  {
-    "head": "renovasi",
-    "tail": "(jalan\\s*setengah\\s*hati|tidak\\s*tuntas)"
-  },
-  {
-    "head": "rehabilitasi",
-    "tail": "(jalan\\s*tidak\\s*maksimal)"
-  },
-  {
-    "head": "digitalisasi",
-    "tail": "(transportasi\\s*gagal|sistem\\s*error)"
-  },
-  {
-    "head": "automated",
-    "tail": "(toll\\s*bermasalah|system\\s*down)"
-  },
-  {
-    "head": "integrated",
-    "tail": "(transport\\s*system\\s*error)"
-  },
-  {
-    "head": "real-time",
-    "tail": "(traffic\\s*info\\s*salah)"
-  },
-  {
-    "head": "monitoring",
-    "tail": "(system\\s*offline|camera\\s*rusak)"
-  },
-  {
-    "head": "surveillance",
-    "tail": "(system\\s*mati)"
-  },
-  {
-    "head": "AI",
-    "tail": "(traffic\\s*control\\s*error)"
-  },
-  {
-    "head": "IoT",
-    "tail": "(sensor\\s*mati|device\\s*offline)"
-  },
-  {
-    "head": "blockchain",
-    "tail": "(toll\\s*payment\\s*error)"
-  },
-  {
-    "head": "machine",
-    "tail": "(learning\\s*traffic\\s*salah)"
-  },
-  {
-    "head": "algoritma",
-    "tail": "(traffic\\s*light\\s*kacau)"
-  },
-  {
-    "head": "big",
-    "tail": "(data\\s*traffic\\s*salah)"
-  },
-  {
-    "head": "cloud",
-    "tail": "(traffic\\s*system\\s*down)"
-  },
-  {
-    "head": "server",
-    "tail": "(traffic\\s*management\\s*down)"
-  },
-  {
-    "head": "database",
-    "tail": "(traffic\\s*corrupt)"
-  },
-  {
-    "head": "network",
-    "tail": "(traffic\\s*system\\s*offline)"
-  },
-  {
-    "head": "connectivity",
-    "tail": "(traffic\\s*device\\s*putus)"
-  },
-  {
-    "head": "bandwidth",
-    "tail": "(traffic\\s*camera\\s*lambat)"
-  },
-  {
-    "head": "latency",
-    "tail": "(traffic\\s*response\\s*tinggi)"
-  },
-  {
-    "head": "investasi",
-    "tail": "(infrastruktur\\s*gagal|transportasi\\s*sia-sia)"
-  },
-  {
-    "head": "subsidi",
-    "tail": "(transportasi\\s*dicabut|BBM\\s*naik)"
-  },
-  {
-    "head": "tarif",
-    "tail": "(transportasi\\s*naik|tol\\s*mahal|parkir\\s*mencekik)"
-  },
-  {
-    "head": "inflasi",
-    "tail": "(ongkos\\s*naik|transportasi\\s*mahal)"
-  },
-  {
-    "head": "ekonomi",
-    "tail": "(transportasi\\s*terpuruk|ongkos\\s*memberatkan)"
-  },
-  {
-    "head": "daya",
-    "tail": "(beli\\s*transportasi\\s*turun)"
-  },
-  {
-    "head": "pendapatan",
-    "tail": "(habis\\s*untuk\\s*transport)"
-  },
-  {
-    "head": "biaya",
-    "tail": "(transportasi\\s*tinggi|operasional\\s*naik)"
-  },
-  {
-    "head": "budget",
-    "tail": "(transportasi\\s*membengkak)"
-  },
-  {
-    "head": "cashless",
-    "tail": "(payment\\s*bermasalah)"
-  },
-  {
-    "head": "fintech",
-    "tail": "(payment\\s*error)"
-  },
-  {
-    "head": "digital",
-    "tail": "(payment\\s*gagal|wallet\\s*bermasalah)"
-  },
-  {
-    "head": "diskriminasi",
-    "tail": "(transportasi\\s*umum)"
-  },
-  {
-    "head": "aksesibilitas",
-    "tail": "(difabel\\s*terabaikan|kursi\\s*roda\\s*sulit)"
-  },
-  {
-    "head": "disability",
-    "tail": "(akses\\s*transportasi\\s*sulit)"
-  },
-  {
-    "head": "lansia",
-    "tail": "(kesulitan\\s*transportasi|akses\\s*sulit)"
-  },
-  {
-    "head": "anak",
-    "tail": "(sekolah\\s*kesulitan\\s*transportasi)"
-  },
-  {
-    "head": "ibu",
-    "tail": "(hamil\\s*kesulitan\\s*transportasi)"
-  },
-  {
-    "head": "gender",
-    "tail": "(safety\\s*transportasi\\s*buruk)"
-  },
-  {
-    "head": "harassment",
-    "tail": "(di\\s*transportasi\\s*umum)"
-  },
-  {
-    "head": "bullying",
-    "tail": "(di\\s*angkutan\\s*umum)"
-  },
-  {
-    "head": "kekerasan",
-    "tail": "(di\\s*transportasi\\s*publik)"
-  },
-  {
-    "head": "pelecehan",
-    "tail": "(di\\s*kendaraan\\s*umum)"
-  },
-  {
-    "head": "diskriminatif",
-    "tail": "(layanan\\s*transportasi)"
-  },
-  {
-    "head": "eksklusif",
-    "tail": "(transportasi\\s*mahal)"
-  },
-  {
-    "head": "inklusif",
-    "tail": "(transportasi\\s*belum)"
-  },
-  {
-    "head": "segregasi",
-    "tail": "(transportasi\\s*sosial)"
-  },
-  {
-    "head": "polusi",
-    "tail": "(udara\\s*kendaraan|suara\\s*traffic|asap\\s*kendaraan)"
-  },
-  {
-    "head": "emisi",
-    "tail": "(kendaraan\\s*tinggi|gas\\s*buang\\s*berbahaya)"
-  },
-  {
-    "head": "karbon",
-    "tail": "(footprint\\s*transportasi\\s*tinggi)"
-  },
-  {
-    "head": "greenhouse",
-    "tail": "(gas\\s*transportasi)"
-  },
-  {
-    "head": "sustainability",
-    "tail": "(transportasi\\s*rendah)"
-  },
-  {
-    "head": "eco-friendly",
-    "tail": "(transportasi\\s*minim)"
-  },
-  {
-    "head": "green",
-    "tail": "(transportation\\s*kurang)"
-  },
-  {
-    "head": "renewable",
-    "tail": "(energy\\s*transport\\s*minim)"
-  },
-  {
-    "head": "electric",
-    "tail": "(vehicle\\s*charging\\s*susah|bus\\s*rusak)"
-  },
-  {
-    "head": "hybrid",
-    "tail": "(vehicle\\s*bermasalah)"
-  },
-  {
-    "head": "solar",
-    "tail": "(powered\\s*transport\\s*rusak)"
-  },
-  {
-    "head": "battery",
-    "tail": "(electric\\s*vehicle\\s*habis)"
-  },
-  {
-    "head": "charging",
-    "tail": "(station\\s*rusak|point\\s*tidak\\s*berfungsi)"
-  },
-  {
-    "head": "biodiesel",
-    "tail": "(bus\\s*bermasalah)"
-  },
-  {
-    "head": "CNG",
-    "tail": "(vehicle\\s*bermasalah)"
-  },
-  {
-    "head": "LPG",
-    "tail": "(transport\\s*bocor)"
-  },
-  {
-    "head": "badai",
-    "tail": "(transportasi\\s*lumpuh)"
-  },
-  {
-    "head": "topan",
-    "tail": "(akses\\s*jalan\\s*tertutup)"
-  },
-  {
-    "head": "angin",
-    "tail": "(kencang\\s*pohon\\s*tumbang)"
-  },
-  {
-    "head": "gempa",
-    "tail": "(jalan\\s*retak|jembatan\\s*rusak)"
-  },
-  {
-    "head": "tsunami",
-    "tail": "(akses\\s*jalan\\s*rusak)"
-  },
-  {
-    "head": "bencana",
-    "tail": "(alam\\s*jalan\\s*putus)"
-  },
-  {
-    "head": "erupsi",
-    "tail": "(gunung\\s*jalan\\s*tertutup)"
-  },
-  {
-    "head": "abu",
-    "tail": "(vulkanik\\s*transportasi\\s*terganggu)"
-  },
-  {
-    "head": "lahar",
-    "tail": "(dingin\\s*jalan\\s*tertutup)"
-  },
-  {
-    "head": "kekeringan",
-    "tail": "(jalan\\s*retak)"
-  },
-  {
-    "head": "kemarau",
-    "tail": "(panjang\\s*jalan\\s*berdebu)"
-  },
-  {
-    "head": "musim",
-    "tail": "(hujan\\s*jalan\\s*rusak)"
-  },
-  {
-    "head": "cuaca",
-    "tail": "(ekstrem\\s*transportasi\\s*terganggu)"
-  },
-  {
-    "head": "iklim",
-    "tail": "(berubah\\s*jalan\\s*rusak)"
-  },
-  {
-    "head": "premanisme",
-    "tail": "(transportasi\\s*umum|terminal\\s*bus)"
-  },
-  {
-    "head": "pungli",
-    "tail": "(di\\s*jalan|transportasi\\s*umum)"
-  },
-  {
-    "head": "calo",
-    "tail": "(tiket\\s*transportasi)"
-  },
-  {
-    "head": "copet",
-    "tail": "(di\\s*angkutan\\s*umum)"
-  },
-  {
-    "head": "pickpocket",
-    "tail": "(transportasi\\s*publik)"
-  },
-  {
-    "head": "pencurian",
-    "tail": "(kendaraan\\s*bermotor)"
-  },
-  {
-    "head": "perampokan",
-    "tail": "(di\\s*jalan)"
-  },
-  {
-    "head": "begal",
-    "tail": "(motor\\s*jalanan)"
-  }
+"regex_booster_patterns": [
+        { "head": "jembatan",      "tail": "(rusak|retak|keropos|roboh|goyah|ambruk|berbahaya|bocor|bergetar)" },
+        { "head": "jalan",         "tail": "(berlubang|amblas|retak|semrawut|rusak|becek|licin|bergelombang|tertutup|terhalang|gelap|menyempit|tidak\\s*rata|tidak\\s*mulus|ambrol|hancur|belum\\s*diaspal|tanah\\s*merah|berbatu)" },
+        { "head": "aspal",         "tail": "(mengelupas|retak|rusak|tipis|jebol|hancur|terkelupas\\s*parah)" },
+        { "head": "trotoar",       "tail": "(licin|pudar|rusak|berlubang|dipenuhi|tidak\\s*aman)" },
+        { "head": "rambu",         "tail": "(pudar|hilang|rusak|tertutup|terbalik|tidak\\s*jelas|kabur)" },
+        { "head": "lampu",         "tail": "(padam|mati|rusak|tak\\s*menyala|kedip-kedip|tidak\\s*berfungsi|error)" },
+        { "head": "genangan",      "tail": "(air|banjir|luas|dalam)" },
+        { "head": "banjir",        "tail": "(parah|menggenang|luas|rob)" },
+        { "head": "tanah",         "tail": "(longsor|erosi|tergelincir)" },
+        { "head": "pohon",         "tail": "(tumbang|roboh|menimpa|halangi\\s*jalan)" },
+        { "head": "kemacetan",     "tail": "(parah|mengular|panjang|ekstrem|total)" },
+        { "head": "persimpangan",  "tail": "(macet|berbahaya|tanpa\\s*lampu|rawan\\s*macet)" },
+        { "head": "akses",         "tail": "(darurat|terhambat|tersendat|masuk\\s*terhambat|keluar\\s*tersendat|gang\\s*terhambat)" },
+        { "head": "ambulans",      "tail": "(tersendat|terhambat|tak\\s*lolos)" },
+        { "head": "underpass",     "tail": "(banjir|tergenang|ambles|gelap|bocor)" },
+        { "head": "flyover",       "tail": "(retak|keropos|ambles|bergetar|bocor)" },
+        { "head": "palang",        "tail": "(pesawat|kereta\\s*pintu|kereta\\s*api\\s*macet|rel\\s*rusak)" },
+        { "head": "ojek",          "tail": "(online|ngambek|terlambat|susah\\s*dapat|mogok\\s*massal)" },
+        { "head": "kendaraan",     "tail": "(ngetem|ngebut|parkir|mogok\\s*di\\s*jalan|lawan\\s*arah|ugal-ugalan)" },
+        { "head": "tolong",        "tail": "(segera|perbaiki|respon|tangani|atasi)" },
+        { "head": "mohon",         "tail": "(dibersihkan|ditangani|diperbaiki|segera)" },
+        { "head": "gila",          "tail": "(macet|becek|rusak|parah)" },
+        { "head": "macet",         "tail": "(panjang|mengular|total|parah|akibat\\s*kecelakaan|banget|ekstrem)" },
+        { "head": "traffic",       "tail": "(light\\s*error|jam|chaos)" },
+        { "head": "bus",           "tail": "(kota\\s*mogok|jarang\\s*lewat|penuh\\s*sesak|rapid\\s*transit\\s*terlambat)" },
+        { "head": "kereta",        "tail": "(terlambat|batal|api\\s*macet)" },
+        { "head": "angkot",        "tail": "(ngetem|lama)" },
+        { "head": "grab",          "tail": "(terlambat|susah\\s*dapat)" },
+        { "head": "gojek",         "tail": "(susah\\s*dapat|terlambat)" },
+        { "head": "ojol",          "tail": "(mogok\\s*massal|ngambek|terlambat|pilih-pilih)" },
+        { "head": "parkir",        "tail": "(liar\\s*merajalela|sembarangan|double|triple|blokir\\s*akses|meter\\s*rusak)" },
+        { "head": "terminal",      "tail": "(kotor|tidak\\s*layak|rusak)" },
+        { "head": "halte",         "tail": "(rusak|bocor|kotor)" },
+        { "head": "stasiun",       "tail": "(kereta\\s*rusak|rusak)" },
+        { "head": "peron",         "tail": "(berbahaya|rusak)" },
+        { "head": "rel",           "tail": "(kereta\\s*rusak|rusak)" },
+        { "head": "commuter",      "tail": "(line\\s*delay|delay)" },
+        { "head": "mikrolet",      "tail": "(parkir\\s*sembarangan|ugal-ugalan)" },
+        { "head": "pete-pete",     "tail": "(ugal-ugalan|ngetem)" },
+        { "head": "tol",           "tail": "(macet\\s*panjang|bermasalah|antrian\\s*panjang)" },
+        { "head": "e-toll",        "tail": "(bermasalah|error)" },
+        { "head": "reader",        "tail": "(tol\\s*error|error)" },
+        { "head": "aplikasi",      "tail": "(ojol\\s*error|parkir\\s*error|waze\\s*salah\\s*arah)" },
+        { "head": "GPS",           "tail": "(error|salah)" },
+        { "head": "navigasi",      "tail": "(menyesatkan|salah)" },
+        { "head": "CCTV",          "tail": "(lalu\\s*lintas\\s*mati|mati)" },
+        { "head": "sistem",        "tail": "(monitoring\\s*down|adaptif\\s*macet|buka\\s*tutup\\s*kacau)" },
+        { "head": "smart",         "tail": "(traffic\\s*light\\s*offline)" },
+        { "head": "sensor",        "tail": "(lampu\\s*rusak|rusak)" },
+        { "head": "push",          "tail": "(button\\s*penyeberangan\\s*rusak)" },
+        { "head": "marka",         "tail": "(jalan\\s*pudar|pudar)" },
+        { "head": "garis",         "tail": "(pembatas\\s*hilang|hilang)" },
+        { "head": "zebra",         "tail": "(cross\\s*tidak\\s*jelas)" },
+        { "head": "pintu",         "tail": "(perlintasan\\s*error)" },
+        { "head": "bottleneck",    "tail": "(parah|macet)" },
+        { "head": "choke",         "tail": "(point\\s*macet)" },
+        { "head": "simpang",       "tail": "(macet|berbahaya)" },
+        { "head": "one",           "tail": "(way\\s*semrawut)" },
+        { "head": "contra",        "tail": "(flow\\s*gagal)" },
+        { "head": "jam",           "tail": "(sibuk\\s*chaos)" },
+        { "head": "rush",          "tail": "(hour\\s*nightmare)" },
+        { "head": "weekend",       "tail": "(macet\\s*total)" },
+        { "head": "arus",          "tail": "(mudik\\s*padat)" },
+        { "head": "jalur",         "tail": "(pantura\\s*macet|lambat\\s*terganggu|cepat\\s*rusak|sepeda\\s*rusak)" },
+        { "head": "bundaran",      "tail": "(macet\\s*memutar)" },
+        { "head": "U-turn",        "tail": "(panjang|macet)" },
+        { "head": "putar",         "tail": "(balik\\s*macet)" },
+        { "head": "BRT",           "tail": "(rusak|terlambat)" },
+        { "head": "shelter",       "tail": "(bus\\s*bocor)" },
+        { "head": "tempat",        "tail": "(tunggu\\s*bus\\s*kotor)" },
+        { "head": "jadwal",        "tail": "(bus\\s*tidak\\s*pasti)" },
+        { "head": "tarif",         "tail": "(ojol\\s*naik|parkir\\s*mahal)" },
+        { "head": "driver",        "tail": "(ojol\\s*pilih-pilih)" },
+        { "head": "e-hailing",     "tail": "(bermasalah)" },
+        { "head": "ride",          "tail": "(sharing\\s*terganggu)" },
+        { "head": "bike",          "tail": "(sharing\\s*rusak)" },
+        { "head": "sepeda",        "tail": "(umum\\s*hilang)" },
+        { "head": "docking",       "tail": "(station\\s*penuh)" },
+        { "head": "tukang",        "tail": "(parkir\\s*nakal)" },
+        { "head": "lahan",         "tail": "(parkir\\s*sempit)" },
+        { "head": "fasilitas",     "tail": "(terminal\\s*rusak)" },
+        { "head": "motor",         "tail": "(parkir\\s*di\\s*trotoar|masuk\\s*jalur\\s*busway|lawan\\s*arah)" },
+        { "head": "mobil",         "tail": "(parkir\\s*di\\s*badan\\s*jalan|terobos\\s*jalur\\s*sepeda|mogok\\s*di\\s*jalan)" },
+        { "head": "hujan",         "tail": "(jalan\\s*licin)" },
+        { "head": "kabut",         "tail": "(asap\\s*tebal)" },
+        { "head": "visibility",    "tail": "(rendah)" },
+        { "head": "berlumpur",     "tail": "(jalan)" },
+        { "head": "material",      "tail": "(konstruksi\\s*berserakan)" },
+        { "head": "galian",        "tail": "(proyek\\s*menganggu)" },
+        { "head": "pekerjaan",     "tail": "(jalan\\s*sembarangan)" },
+        { "head": "penerangan",    "tail": "(jalan\\s*mati)" },
+        { "head": "area",          "tail": "(rawan\\s*kejahatan|school\\s*zone\\s*tidak\\s*aman)" },
+        { "head": "crosswalk",     "tail": "(berbahaya)" },
+        { "head": "blind",         "tail": "(spot\\s*berbahaya)" },
+        { "head": "tikungan",      "tail": "(maut|berbahaya)" },
+        { "head": "tanjakan",      "tail": "(curam\\s*licin)" },
+        { "head": "speed",         "tail": "(bump\\s*terlalu\\s*tinggi)" },
+        { "head": "polisi",        "tail": "(tidur\\s*merusak)" },
+        { "head": "perlintasan",   "tail": "(anak\\s*sekolah\\s*berbahaya)" },
+        { "head": "klakson",       "tail": "(berlebihan)" },
+        { "head": "suara",         "tail": "(knalpot\\s*berisik)" },
+        { "head": "balap",         "tail": "(liar)" },
+        { "head": "pedagang",      "tail": "(kaki\\s*lima\\s*di\\s*jalan)" },
+        { "head": "warung",        "tail": "(tenda\\s*di\\s*badan\\s*jalan)" },
+        { "head": "pengemis",      "tail": "(di\\s*lampu\\s*merah)" },
+        { "head": "pengamen",      "tail": "(jalanan\\s*mengganggu)" },
+        { "head": "ongkos",        "tail": "(naik\\s*gara-gara\\s*macet)" },
+        { "head": "BBM",           "tail": "(boros\\s*karena\\s*macet)" },
+        { "head": "terlambat",     "tail": "(kerja\\s*karena\\s*macet)" },
+        { "head": "deadline",      "tail": "(terancam\\s*macet)" },
+        { "head": "pemadam",       "tail": "(kebakaran\\s*tersendat)" },
+        { "head": "distribusi",    "tail": "(barang\\s*terhambat)" },
+        { "head": "logistik",      "tail": "(terganggu\\s*macet)" },
+        { "head": "parah",         "tail": "(poll|banget)" },
+        { "head": "jalanan",       "tail": "(kacau\\s*balau|semrawut)" },
+        { "head": "lalu",          "tail": "(lintas\\s*runyam)" },
+        { "head": "situasi",       "tail": "(chaos)" },
+        { "head": "stuck",         "tail": "(total)" },
+        { "head": "mandeg",        "tail": "(ga\\s*jalan)" },
+        { "head": "antri",         "tail": "(mengular|panjang)" },
+        { "head": "bergelombang",  "tail": "(kayak\\s*laut)" },
+        { "head": "bahu",          "tail": "(jalan\\s*rusak)" },
+        { "head": "median",        "tail": "(jalan\\s*rusak)" },
+        { "head": "pembatas",      "tail": "(jalan\\s*hilang|median\\s*roboh)" },
+        { "head": "gorong-gorong", "tail": "(tersumbat)" },
+        { "head": "saluran",       "tail": "(air\\s*mampet)" },
+        { "head": "drainase",      "tail": "(buruk)" },
+        { "head": "setapak",       "tail": "(rusak)" },
+        { "head": "gang",          "tail": "(sempit)" },
+        { "head": "JPO",           "tail": "(rusak|berbahaya)" },
+        { "head": "terowongan",    "tail": "(bocor|gelap)" },
+        { "head": "sambungan",     "tail": "(flyover\\s*rusak)" },
+        { "head": "pagar",         "tail": "(pembatas\\s*rusak)" },
+        { "head": "guardrail",     "tail": "(lepas)" },
+        { "head": "infrastruktur", "tail": "(jalan\\s*rusak|transportasi\\s*buruk|publik\\s*hancur)" },
+        { "head": "konstruksi",    "tail": "(jalan\\s*asal-asalan|bangunan\\s*retak|material\\s*jelek)" },
+        { "head": "kontraktor",    "tail": "(abal-abal|tidak\\s*kompeten|kerja\\s*sembarangan)" },
+        { "head": "anggaran",      "tail": "(jalan\\s*habis|proyek\\s*membengkak|dana\\s*bocor)" },
+        { "head": "tender",        "tail": "(jalan\\s*bermasalah|proyek\\s*asal-asalan)" },
+        { "head": "pengawasan",    "tail": "(proyek\\s*lemah|jalan\\s*tidak\\s*ada)" },
+        { "head": "kualitas",      "tail": "(jalan\\s*buruk|material\\s*jelek|pekerjaan\\s*asal)" },
+        { "head": "spesifikasi",   "tail": "(jalan\\s*tidak\\s*sesuai|material\\s*di\\s*bawah\\s*standar)" },
+        { "head": "maintenance",   "tail": "(jalan\\s*diabaikan|infrastruktur\\s*tidak\\s*ada)" },
+        { "head": "perawatan",     "tail": "(jalan\\s*tidak\\s*rutin|fasilitas\\s*terabaikan)" },
+        { "head": "revitalisasi",  "tail": "(jalan\\s*gagal|area\\s*tidak\\s*berhasil)" },
+        { "head": "perbaikan",     "tail": "(jalan\\s*tambal\\s*sulam|sementara\\s*rusak\\s*lagi)" },
+        { "head": "renovasi",      "tail": "(jalan\\s*setengah\\s*hati|tidak\\s*tuntas)" },
+        { "head": "rehabilitasi",  "tail": "(jalan\\s*tidak\\s*maksimal)" },
+        { "head": "digitalisasi",  "tail": "(transportasi\\s*gagal|sistem\\s*error)" },
+        { "head": "automated",     "tail": "(toll\\s*bermasalah|system\\s*down)" },
+        { "head": "integrated",    "tail": "(transport\\s*system\\s*error)" },
+        { "head": "real-time",     "tail": "(traffic\\s*info\\s*salah)" },
+        { "head": "monitoring",    "tail": "(system\\s*offline|camera\\s*rusak)" },
+        { "head": "surveillance",  "tail": "(system\\s*mati)" },
+        { "head": "AI",            "tail": "(traffic\\s*control\\s*error)" },
+        { "head": "IoT",           "tail": "(sensor\\s*mati|device\\s*offline)" },
+        { "head": "blockchain",    "tail": "(toll\\s*payment\\s*error)" },
+        { "head": "machine",       "tail": "(learning\\s*traffic\\s*salah)" },
+        { "head": "algoritma",     "tail": "(traffic\\s*light\\s*kacau)" },
+        { "head": "big",           "tail": "(data\\s*traffic\\s*salah)" },
+        { "head": "cloud",         "tail": "(traffic\\s*system\\s*down)" },
+        { "head": "server",        "tail": "(traffic\\s*management\\s*down)" },
+        { "head": "database",      "tail": "(traffic\\s*corrupt)" },
+        { "head": "network",       "tail": "(traffic\\s*system\\s*offline)" },
+        { "head": "connectivity",  "tail": "(traffic\\s*device\\s*putus)" },
+        { "head": "bandwidth",     "tail": "(traffic\\s*camera\\s*lambat)" },
+        { "head": "latency",       "tail": "(traffic\\s*response\\s*tinggi)" },
+        { "head": "investasi",     "tail": "(infrastruktur\\s*gagal|transportasi\\s*sia-sia)" },
+        { "head": "subsidi",       "tail": "(transportasi\\s*dicabut|BBM\\s*naik)" },
+        { "head": "tarif",         "tail": "(transportasi\\s*naik|tol\\s*mahal|parkir\\s*mencekik)" },
+        { "head": "inflasi",       "tail": "(ongkos\\s*naik|transportasi\\s*mahal)" },
+        { "head": "ekonomi",       "tail": "(transportasi\\s*terpuruk|ongkos\\s*memberatkan)" },
+        { "head": "daya",          "tail": "(beli\\s*transportasi\\s*turun)" },
+        { "head": "pendapatan",    "tail": "(habis\\s*untuk\\s*transport)" },
+        { "head": "biaya",         "tail": "(transportasi\\s*tinggi|operasional\\s*naik)" },
+        { "head": "budget",        "tail": "(transportasi\\s*membengkak)" },
+        { "head": "cashless",      "tail": "(payment\\s*bermasalah)" },
+        { "head": "fintech",       "tail": "(payment\\s*error)" },
+        { "head": "digital",       "tail": "(payment\\s*gagal|wallet\\s*bermasalah)" },
+        { "head": "diskriminasi",  "tail": "(transportasi\\s*umum)" },
+        { "head": "aksesibilitas", "tail": "(difabel\\s*terabaikan|kursi\\s*roda\\s*sulit)" },
+        { "head": "disability",    "tail": "(akses\\s*transportasi\\s*sulit)" },
+        { "head": "lansia",        "tail": "(kesulitan\\s*transportasi|akses\\s*sulit)" },
+        { "head": "anak",          "tail": "(sekolah\\s*kesulitan\\s*transportasi)" },
+        { "head": "ibu",           "tail": "(hamil\\s*kesulitan\\s*transportasi)" },
+        { "head": "gender",        "tail": "(safety\\s*transportasi\\s*buruk)" },
+        { "head": "harassment",    "tail": "(di\\s*transportasi\\s*umum)" },
+        { "head": "bullying",      "tail": "(di\\s*angkutan\\s*umum)" },
+        { "head": "kekerasan",     "tail": "(di\\s*transportasi\\s*publik)" },
+        { "head": "pelecehan",     "tail": "(di\\s*kendaraan\\s*umum)" },
+        { "head": "diskriminatif", "tail": "(layanan\\s*transportasi)" },
+        { "head": "eksklusif",     "tail": "(transportasi\\s*mahal)" },
+        { "head": "inklusif",      "tail": "(transportasi\\s*belum)" },
+        { "head": "segregasi",     "tail": "(transportasi\\s*sosial)" },
+        { "head": "polusi",        "tail": "(udara\\s*kendaraan|suara\\s*traffic|asap\\s*kendaraan)" },
+        { "head": "emisi",         "tail": "(kendaraan\\s*tinggi|gas\\s*buang\\s*berbahaya)" },
+        { "head": "karbon",        "tail": "(footprint\\s*transportasi\\s*tinggi)" },
+        { "head": "greenhouse",    "tail": "(gas\\s*transportasi)" },
+        { "head": "sustainability", "tail": "(transportasi\\s*rendah)" },
+        { "head": "eco-friendly",  "tail": "(transportasi\\s*minim)" },
+        { "head": "green",         "tail": "(transportation\\s*kurang)" },
+        { "head": "renewable",     "tail": "(energy\\s*transport\\s*minim)" },
+        { "head": "electric",      "tail": "(vehicle\\s*charging\\s*susah|bus\\s*rusak)" },
+        { "head": "hybrid",        "tail": "(vehicle\\s*bermasalah)" },
+        { "head": "solar",         "tail": "(powered\\s*transport\\s*rusak)" },
+        { "head": "battery",       "tail": "(electric\\s*vehicle\\s*habis)" },
+        { "head": "charging",      "tail": "(station\\s*rusak|point\\s*tidak\\s*berfungsi)" },
+        { "head": "biodiesel",     "tail": "(bus\\s*bermasalah)" },
+        { "head": "CNG",           "tail": "(vehicle\\s*bermasalah)" },
+        { "head": "LPG",           "tail": "(transport\\s*bocor)" },
+        { "head": "badai",         "tail": "(transportasi\\s*lumpuh)" },
+        { "head": "topan",         "tail": "(akses\\s*jalan\\s*tertutup)" },
+        { "head": "angin",         "tail": "(kencang\\s*pohon\\s*tumbang)" },
+        { "head": "gempa",         "tail": "(jalan\\s*retak|jembatan\\s*rusak)" },
+        { "head": "tsunami",       "tail": "(akses\\s*jalan\\s*rusak)" },
+        { "head": "bencana",       "tail": "(alam\\s*jalan\\s*putus)" },
+        { "head": "erupsi",        "tail": "(gunung\\s*jalan\\s*tertutup)" },
+        { "head": "abu",           "tail": "(vulkanik\\s*transportasi\\s*terganggu)" },
+        { "head": "lahar",         "tail": "(dingin\\s*jalan\\s*tertutup)" },
+        { "head": "kekeringan",    "tail": "(jalan\\s*retak)" },
+        { "head": "kemarau",       "tail": "(panjang\\s*jalan\\s*berdebu)" },
+        { "head": "musim",         "tail": "(hujan\\s*jalan\\s*rusak)" },
+        { "head": "cuaca",         "tail": "(ekstrem\\s*transportasi\\s*terganggu)" },
+        { "head": "iklim",         "tail": "(berubah\\s*jalan\\s*rusak)" },
+        { "head": "premanisme",    "tail": "(transportasi\\s*umum|terminal\\s*bus)" },
+        { "head": "pungli",        "tail": "(di\\s*jalan|transportasi\\s*umum)" },
+        { "head": "calo",          "tail": "(tiket\\s*transportasi)" },
+        { "head": "copet",         "tail": "(di\\s*angkutan\\s*umum)" },
+        { "head": "pickpocket",    "tail": "(transportasi\\s*publik)" },
+        { "head": "pencurian",     "tail": "(kendaraan\\s*bermotor)" },
+        { "head": "perampokan",    "tail": "(di\\s*jalan)" },
+        { "head": "begal",         "tail": "(motor\\s*jalanan)" },
+        { "head": "rampok",        "tail": "(penumpang\\s*angkot)" },
+        { "head": "todong",        "tail": "(sopir\\s*angkutan)" },
+        { "head": "palak",         "tail": "(pengemudi\\s*truk)" },
+        { "head": "gangster",      "tail": "(terminal\\s*angkot)" },
+        { "head": "mafia",         "tail": "(transportasi\\s*online)" },
+        { "head": "sindikat",      "tail": "(pencurian\\s*motor)" },
+        { "head": "komplotan",     "tail": "(begal\\s*jalanan)" },
+        { "head": "pandemi",       "tail": "(transportasi\\s*terbatas)" },
+        { "head": "lockdown",      "tail": "(transportasi\\s*umum\\s*tutup)" },
+        { "head": "karantina",     "tail": "(akses\\s*transportasi\\s*dibatasi)" },
+        { "head": "isolasi",       "tail": "(transportasi\\s*terhenti)" },
+        { "head": "vaksinasi",     "tail": "(akses\\s*transportasi\\s*syarat)" },
+        { "head": "prokes",        "tail": "(transportasi\\s*tidak\\s*diterapkan)" },
+        { "head": "masker",        "tail": "(transportasi\\s*umum\\s*tidak\\s*wajib)" },
+        { "head": "sanitizer",     "tail": "(transportasi\\s*tidak\\s*tersedia)" },
+        { "head": "disinfektan",   "tail": "(kendaraan\\s*tidak\\s*rutin)" },
+        { "head": "sterilisasi",   "tail": "(angkutan\\s*umum\\s*jarang)" },
+        { "head": "physical",      "tail": "(distancing\\s*transportasi\\s*tidak\\s*jalan)" },
+        { "head": "social",        "tail": "(distancing\\s*angkutan\\s*diabaikan)" },
+        { "head": "cluster",       "tail": "(transportasi\\s*umum)" },
+        { "head": "transmisi",     "tail": "(virus\\s*di\\s*angkutan)" },
+        { "head": "ventilasi",     "tail": "(transportasi\\s*buruk)" },
+        { "head": "regulasi",      "tail": "(transportasi\\s*tidak\\s*jelas)" },
+        { "head": "peraturan",     "tail": "(lalu\\s*lintas\\s*diabaikan)" },
+        { "head": "undang-undang", "tail": "(transportasi\\s*dilanggar)" },
+        { "head": "kebijakan",     "tail": "(transportasi\\s*tidak\\s*tepat)" },
+        { "head": "standar",       "tail": "(keselamatan\\s*transportasi\\s*rendah)" },
+        { "head": "sertifikasi",   "tail": "(kendaraan\\s*tidak\\s*ada)" },
+        { "head": "lisensi",       "tail": "(transportasi\\s*online\\s*bermasalah)" },
+        { "head": "izin",          "tail": "(operasional\\s*transportasi\\s*bermasalah)" },
+        { "head": "legal",         "tail": "(transportasi\\s*online\\s*abu-abu)" },
+        { "head": "illegal",       "tail": "(transportasi\\s*beroperasi)" },
+        { "head": "law",           "tail": "(enforcement\\s*lalu\\s*lintas\\s*lemah)" },
+        { "head": "compliance",    "tail": "(transportasi\\s*rendah)" },
+        { "head": "violation",     "tail": "(traffic\\s*rule\\s*banyak)" },
+        { "head": "penalty",       "tail": "(pelanggaran\\s*lalu\\s*lintas\\s*ringan)" },
+        { "head": "denda",         "tail": "(pelanggaran\\s*tidak\\s*efektif)" },
+        { "head": "tilang",        "tail": "(elektronik\\s*bermasalah)" },
+        { "head": "e-tilang",      "tail": "(sistem\\s*error)" },
+        { "head": "SIM",           "tail": "(palsu\\s*beredar)" },
+        { "head": "STNK",          "tail": "(palsu\\s*marak)" },
+        { "head": "KIR",           "tail": "(kendaraan\\s*tidak\\s*berlaku)" }
     ]
-}
