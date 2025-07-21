@@ -46,8 +46,9 @@ def preprocess_text(text: str, slang_dict, stemmer, stop_words, aduan_keywords):
         cleaned.append(stem)
     return " ".join(cleaned)
 
-def is_keyword_aduan(text: str, aduan_keywords) -> int:
-    return int(bool(set(word_tokenize(text.lower())) & aduan_keywords))
+def is_keyword_aduan(text: str, aduan_keywords: set) -> int:
+    text_lower = text.lower()
+    return int(any(keyword in text_lower for keyword in aduan_keywords))
 
 def predict_aduan(text, vectorizer, xgb_model, aduan_keywords, slang_dict, stemmer, stop_words, threshold=0.4):
     txt_clean = preprocess_text(text, slang_dict, stemmer, stop_words, aduan_keywords)
