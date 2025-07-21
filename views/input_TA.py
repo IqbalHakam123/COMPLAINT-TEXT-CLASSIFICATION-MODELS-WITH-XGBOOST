@@ -15,7 +15,7 @@ def app():
     vectorizer = joblib.load("model/vectorizer-fiks-1.pkl")
     xgb_model  = joblib.load("model/xgboost_model-fiks-1.pkl")
     aduan_keywords = set(np.load(
-        "model/aduan_keywords-1.npy",
+        "model/aduan-keywordS.npy",
         allow_pickle=True
     ))
 
