@@ -64,7 +64,7 @@ def main():
 
     # ====== Konfigurasi Stopwords ======
     stop_words = set(stopwords.words("indonesian")) | set(stopwords.words("english"))
-    stop_words.update(["iya", "lalu", "lintas"])   
+    stop_words.update(["iya", "lalu", "lintas", "hambatan"])   
     stop_words -= {"tidak", "macet", "jalan"}      
 
     # ======================= UI HALAMAN PREDIKSI =======================
