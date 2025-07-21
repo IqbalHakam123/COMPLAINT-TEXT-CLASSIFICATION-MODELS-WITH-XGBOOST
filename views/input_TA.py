@@ -36,7 +36,7 @@ def app():
     slang_dict = load_slang_dict()
     stemmer = StemmerFactory().create_stemmer()
     stop_words = set(stopwords.words("indonesian")) | set(stopwords.words("english"))
-    stop_words.update(["iya", "lalu", "lintas"])   
+    stop_words.update(["iya", "lalu", "lintas", "hambatan"])   
     stop_words -= {"tidak", "macet", "jalan"} 
 
     # ==== Preprocessing untuk ML ===================================
