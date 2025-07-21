@@ -1,4 +1,34 @@
-"regex_booster_patterns": [
+{
+  "token_booster_pairs": [
+    ["jembatan", "rusak"],
+    ["jalan", "berlubang"],
+    ["rambu", "pudar"],
+    ["lampu", "padam"],
+    ["bus", "mogok"],
+    ["aspal", "retak"],
+    ["trotoar", "licin"],
+    ["genangan", "air"],
+    ["banjir", "luas"],
+    ["tanah", "longsor"],
+    ["pohon", "tumbang"],
+    ["kemacetan", "parah"],
+    ["persimpangan", "berbahaya"],
+    ["akses", "darurat"],
+    ["ambulans", "tersendat"],
+    ["underpass", "banjir"],
+    ["flyover", "retak"],
+    ["palang", "pesawat"],          
+    ["jalur", "sepeda"],           
+    ["ojek", "online"],            
+    ["kendaraan", "ngetem"],       
+    ["tolong", "segera"],          
+    ["mohon", "dibersihkan"],     
+    ["gila", "macet"],             
+    ["banget", "lancar"],          
+    ["keep", "smooth"]             
+  ],
+
+  "regex_booster_patterns": [
         { "head": "jembatan",      "tail": "(rusak|retak|keropos|roboh|goyah|ambruk|berbahaya|bocor|bergetar)" },
         { "head": "jalan",         "tail": "(berlubang|amblas|retak|semrawut|rusak|becek|licin|bergelombang|tertutup|terhalang|gelap|menyempit|tidak\\s*rata|tidak\\s*mulus|ambrol|hancur|belum\\s*diaspal|tanah\\s*merah|berbatu)" },
         { "head": "aspal",         "tail": "(mengelupas|retak|rusak|tipis|jebol|hancur|terkelupas\\s*parah)" },
@@ -274,3 +304,4 @@
         { "head": "STNK",          "tail": "(palsu\\s*marak)" },
         { "head": "KIR",           "tail": "(kendaraan\\s*tidak\\s*berlaku)" }
     ]
+}
