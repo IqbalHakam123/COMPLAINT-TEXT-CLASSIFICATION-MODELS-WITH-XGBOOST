@@ -62,14 +62,14 @@ def load_regex_boosters(json_path: str, max_gap: int = 6) -> List[Pattern]:
 
             head = re.escape(p["head"])
             tail = p["tail"]
-            pattern = rf"{head}(?:\s+\w+){{0,{max_gap}}}?\s*{tail}"
+            # Pola diperbaiki: greedy quantifier dan \s+ sebelum tail
+            pattern = rf"{head}(?:\s+\w+){{0,{max_gap}}}\s+{tail}"
             compiled_patterns.append(re.compile(pattern, flags=re.IGNORECASE))
 
         return compiled_patterns
     except Exception as e:
         st.error(f"Gagal memuat regex boosters: {e}")
         return []
-
 
 @st.cache_resource
 def load_model():
