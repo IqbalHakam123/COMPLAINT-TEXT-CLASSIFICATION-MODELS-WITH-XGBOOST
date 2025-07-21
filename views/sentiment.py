@@ -14,8 +14,8 @@ from streamlit_extras.colored_header import colored_header
 # ====== KONFIGURASI PATH ======
 VECT_PATH   = "model/vectorizer-fiks-1.pkl"
 XGB_PATH    = "model/xgboost_model-fiks-1.pkl"
-KEYW_PATH   = "model/aduan_keywords-1.npy"
-REGEX_PATH  = "model/regex_booster.json"
+KEYW_PATH   = "model/aduan-keywords.npy"
+REGEX_PATH  = "source/regex_booster.json"
 SLANG_PATH  = "source/slang-kamus.txt"
 THRESHOLD   = 0.4
 
