@@ -11,7 +11,7 @@ from streamlit_extras.colored_header import colored_header
 # ====== KONFIGURASI PATH ======
 VECT_PATH = "model/vectorizer-fiks-1.pkl"
 XGB_PATH  = "model/xgboost_model-fiks-1.pkl"
-KEYW_PATH = "model/aduan-keywordS.npy"
+KEYW_PATH = "model/aduan_keywords-1.npy"
 SLANG_PATH = "source/slang-kamus.txt"
 THRESHOLD = 0.4
 
@@ -55,19 +55,15 @@ def predict_aduan(text, vectorizer, xgb_model, aduan_keywords, slang_dict, stemm
     return lbl, prob, txt_clean
 
 def main():
-    # ====== Load semua komponen pendukung ======
     vectorizer = joblib.load(VECT_PATH)
     xgb_model = joblib.load(XGB_PATH)
     aduan_keywords = set(np.load(KEYW_PATH, allow_pickle=True))
     slang_dict = load_slang_dict()
     stemmer = StemmerFactory().create_stemmer()
-
-    # ====== Konfigurasi Stopwords ======
     stop_words = set(stopwords.words("indonesian")) | set(stopwords.words("english"))
-    stop_words.update(["iya", "lalu", "lintas", "hambatan","api"])   
-    stop_words -= {"tidak", "macet", "jalan"}      
+    stop_words.update(["iya"])
 
-    # ======================= UI HALAMAN PREDIKSI =======================
+#======================= UI HALAMAN PREDIKSI =============
     colored_header(
         label="🕵️ Sampaikan Aduan Anda",
         description="Sistem ini akan mendeteksi apakah teks Anda merupakan aduan atau bukan.",
