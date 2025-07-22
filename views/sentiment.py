@@ -11,7 +11,7 @@ from streamlit_extras.colored_header import colored_header
 # ====== KONFIGURASI PATH ======
 VECT_PATH = "model/vectorizer-fiks-1.pkl"
 XGB_PATH  = "model/xgboost_model-fiks-1.pkl"
-KEYW_PATH = "model/aduan-keywords.npy"
+KEYW_PATH = "model/aduan-keywordS.npy"
 SLANG_PATH = "source/slang-kamus.txt"
 THRESHOLD = 0.4
 
@@ -64,7 +64,7 @@ def main():
 
     # ====== Konfigurasi Stopwords ======
     stop_words = set(stopwords.words("indonesian")) | set(stopwords.words("english"))
-    stop_words.update(["iya", "lalu", "lintas", "hambatan"])   
+    stop_words.update(["iya", "lalu", "lintas", "hambatan","api"])   
     stop_words -= {"tidak", "macet", "jalan"}      
 
     # ======================= UI HALAMAN PREDIKSI =======================
