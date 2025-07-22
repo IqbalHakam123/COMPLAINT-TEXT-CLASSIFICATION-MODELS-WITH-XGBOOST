@@ -2,12 +2,15 @@ import streamlit as st
 import joblib
 import numpy as np
 import re
+import nltk
 from nltk.tokenize import word_tokenize
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from nltk.corpus import stopwords
 from scipy.sparse import hstack
 from streamlit_extras.colored_header import colored_header
 
+nltk.download ('punkt')
+nltk.download ('stopwords')
 # ====== KONFIGURASI PATH ======
 VECT_PATH = "model/vectorizer-fiks-1.pkl"
 XGB_PATH  = "model/xgboost_model-fiks-1.pkl"
